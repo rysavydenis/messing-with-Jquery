@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery-3</title>
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <style>
+            #block1 {
+                background-color:lightgreen;
+                border: 1px solid black;
+                width: 60%;
+                height:50px;
+                margin:12px;
+            }
+            #block2 {
+                background-color: lightgreen;
+                border: 1px solid black;
+                width: 60%;
+                height:50px;
+                margin:12px;
+            }
+        
+            #canvas {
+                width:30%;
+                height:10%;
+                border: 1px solid black ; 
+                float:left;
+                margin:15px;
+            }
+        
+            #canvas2 {
+                width:30%;
+                height:400%;
+                border: 1px solid black ; 
+                float:right;
+                margin:15px;
+            }
+            
+            #button1 {
+                margin:15px;
+            }
+        
+            #button5 {
+                margin:15px;
+                margin-bottom:0px;
+            }
+        
+            #button6 {
+                margin:15px;
+            }
+            
+</style>
+</head>
+<body>
+   
+
+    <h1>Using J-Query</h1>
+
+    <div id="block1">
+    </div>
+
+
+    <div id="block2">
+    </div>
+
+    <input id="button1" type="button" value="switch color" onclick="switchColor()">
+    <input id="button2" type="button" value="switchColorback"onclick="switchColorback()">
+    <input id = "button3" type="button" value="alert">
+<br>
+ 
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+
+    <input id = "button5" type="button" value="check Coordinates">
+    <p>press to Initialize the Scan of the Coordinates</p>
+
+<br>
+<br>
+<br>
+    <h3 id="coords"></h3>
+    
+    <input id ="button6"  type="button" value="hide/show Coordinates">
+<br>
+<br>
+    <input type="button" ;
+           value="yellow" ;
+           onclick="$('body').css('background-color', 'yellow');
+    ">
+    <input type="button";
+           value="lightblue" ;
+           onclick="$('body').css('background-color', 'lightblue');
+    ">
+    <input type="button"
+           value=" lightgrey" 
+           onclick="$('body').css('background-color', 'lightgrey');
+    ">
+<script>
+             
+        $('#button6').on('click', function(){
+            $('h3').toggle();
+        })
+
+        $('#button5').on('click', function(e){
+
+            $('#canvas').on('mousemove', function(e) {
+            $('#coords').html('X:'+ e.clientX+"Y:"+ e.clientY); 
+
+            $('#canvas2').on('mousemove', function(e) {
+            $('#coords').html('X:'+ e.clientX+"Y:"+ e.clientY);
+            })        
+
+        })
+
+        $('#button5').on('click',)
+        });
+
+        $('#button3').click(function(){
+            alert('button3');
+        });
+
+
+        $('#button4').click(function(){
+            alert('button4');
+        })
+   
+    $('#block2').css('background-color', 'lightgreen');
+    $('#block2').css('background-color', 'ligtgreen');
+
+    function switchColor() {
+      $('#block1').css('background-color','blue');
+      $('#block2').css('background-color', 'blue');
+    }
+
+    function switchColorback() {
+        $('#block1').css('background-color','lightgreen'); 
+        $('#block2').css('background-color', 'lightgreen');
+    } 
+
+</script>  
+</body>
+</html>
